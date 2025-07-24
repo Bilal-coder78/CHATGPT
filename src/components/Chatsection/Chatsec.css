@@ -1,0 +1,5 @@
+.chatsec{
+    height: 100vh;
+    background-color: var(--background-color);
+    flex: 1;
+}
