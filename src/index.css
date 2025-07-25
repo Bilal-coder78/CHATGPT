@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;;
+    font-family: "Poppins", sans-serif;
 }
 #root{
     display: flex;
@@ -12,9 +12,16 @@
 .dark-mode{
     --color: white;
     --background-color: rgb(29, 35, 40);
+    --btn-background-color: white;
+    --btn-color: rgb(29, 35, 40);
+    --btn-hover-color: rgba(255, 255, 255, 0.58);
+
 }
 
 .light-mode{
     --color: rgb(29, 35, 40);
     --background-color: white;
+    --btn-background-color: rgb(29, 35, 40);
+    --btn-color: white;
+    --btn-hover-color: rgba(29, 35, 40, 0.853);
 }
