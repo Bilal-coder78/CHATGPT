@@ -83,3 +83,29 @@
 .sendbtn:hover{
     background-color: var(--btn-hover-color);
 }
+
+.result{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px;
+    font-size: 20px;
+}
+
+.result p{
+    color: var(--color);
+}
+
+.userbox{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.aibox{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
