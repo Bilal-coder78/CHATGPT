@@ -10,12 +10,14 @@ function Usecontext({children}) {
   const [recentprompt,setrecentprompt] = useState("")
 
     async function sent(input){
+      setresultdata("")
       setshowresult(true)
       setrecentprompt(input)
       setloading(true)
       let response = await main(input)
       setresultdata(response)
       setinput("")
+      setloading(false)
     }
     const data={
       sent,

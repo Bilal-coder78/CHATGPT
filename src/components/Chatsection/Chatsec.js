@@ -7,7 +7,7 @@ import user from "../../assets/user.png"
 import ai from "../../assets/ai.png"
 
 function Chatsec() {
-  let {sent,input,setinput,showresult,resultdata,recentprompt} = useContext(dataContext)
+  let {sent,input,setinput,showresult,resultdata,recentprompt,loading} = useContext(dataContext)
   return (
     <div className='chatsec'>
         <div className="topsection">
@@ -22,7 +22,11 @@ function Chatsec() {
               </div>
             <div className='aibox'>
               <img src={ai} alt="" width={"50px"}/>
-              <p>{resultdata}</p>
+              {loading?<div className='loader'>
+                <hr/>
+                <hr/>
+                <hr/>
+              </div>:<p>{resultdata}</p>}
               </div>
               </div>}
         </div>
