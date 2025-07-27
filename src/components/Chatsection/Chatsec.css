@@ -24,6 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     flex-direction: column;
     font-size: 2vmax;
 }
@@ -140,5 +141,15 @@
     }
     100%{
         background-position: 800px 0px;
+    }
+}
+
+@media (max-width:600px) {
+    .chatsec{
+        width: 100%;
+    }
+    .headings{
+        font-size: 1.5vmax;
+        padding: 15px;
     }
 }

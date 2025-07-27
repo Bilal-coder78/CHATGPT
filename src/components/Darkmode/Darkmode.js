@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { MdOutlineWbSunny } from "react-icons/md";
+import { LuMoon } from "react-icons/lu";
 import "./Darkmode.css"
 
 function Darkmode() {
@@ -19,7 +20,7 @@ function Darkmode() {
     <div>
         <button className='darkmodebtn' onClick={()=>{
             toggle()
-        }}><MdOutlineWbSunny/></button>
+        }}>{mode==="dark-mode"?<MdOutlineWbSunny/>:<LuMoon/>}</button>
     </div>
   )
 }

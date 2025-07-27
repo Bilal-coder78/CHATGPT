@@ -32,9 +32,9 @@ function Chatsec() {
         </div>
         <div className="bottomsection">
           <input onChange={(e)=>setinput(e.target.value)} type="text"placeholder='Enter a prompt' value={input}/>
-          <button className='sendbtn' onClick={()=>{
+          {input?<button className='sendbtn' onClick={()=>{
             sent(input)
-          }}><LuSendHorizontal /></button>
+          }}><LuSendHorizontal /></button>:null}
          <Darkmode/>
         </div>
     </div>
