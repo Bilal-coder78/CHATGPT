@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Sidebar.css"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaPlus } from "react-icons/fa6";
 import { FaRegMessage } from "react-icons/fa6";
 import { useState } from 'react';
+import { dataContext } from '../../Usecontext/Usecontext';
 
 function Sidebar() {
   const [extend, setextend] = useState(false)
+  const {sent,prevprompt} = useContext(dataContext)
   return (
     <div className='sidebar'>
         <GiHamburgerMenu className='ham' onClick={()=>{
@@ -16,10 +18,15 @@ function Sidebar() {
           <FaPlus/>
           {extend?<p>new chat</p>:null}
         </div>
-        <div className="recent">
+        {prevprompt.map((item)=>{
+          return (
+             <div className="recent">
           <FaRegMessage />
-          {extend?<p>who are you</p>:null}
+          {extend?<p>{item}</p>:null}
         </div>
+          )
+        })}
+        
     </div>
   )
 }

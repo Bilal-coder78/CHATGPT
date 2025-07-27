@@ -8,14 +8,16 @@ function Usecontext({children}) {
   const [loading,setloading] = useState(false)
   const [resultdata,setresultdata] = useState("")
   const [recentprompt,setrecentprompt] = useState("")
+  const [prevprompt,setprevprompt] = useState([])
 
     async function sent(input){
       setresultdata("")
       setshowresult(true)
       setrecentprompt(input)
       setloading(true)
+      setprevprompt(prev=>[...prev,input])
       let response = await main(input)
-      setresultdata(response)
+      setresultdata(response.split("**") && response.split("*"))
       setinput("")
       setloading(false)
     }
@@ -30,7 +32,8 @@ function Usecontext({children}) {
       resultdata,
       setresultdata,
       recentprompt,
-      setrecentprompt
+      setrecentprompt,
+      prevprompt
     }
   return (
     <>
